@@ -13,6 +13,7 @@ A subscription tracking and email reminder service built with the MEN stack (Mon
 ⚡ Express + Node.js backend for fast performance
 
 🛠 Tech Stack
+
 Backend: Node.js + Express
 
 Database: MongoDB
@@ -80,3 +81,4 @@ The system sends email reminders before the renewal date.
 
 📜 License
 MIT License – free to use and modify.
+
