@@ -1,84 +1,37 @@
-📬 NexusPay
-A subscription tracking and email reminder service built with the MEN stack (MongoDB, Express, Node.js) that uses Arcjet for API protection and Upstash QStash for scheduled email delivery.
+# 📬 NexusPay
 
-🚀 Features
-🔐 Secure API requests using Arcjet
+A **subscription tracking and email reminder** service built with the **MEN stack** (MongoDB, Express, Node.js) that uses **Arcjet** for API protection and **Upstash QStash** for scheduled email delivery.
 
-⏰ Automated scheduling with Upstash 
+## 🚀 Features
+- 🔐 **Secure API requests** using [Arcjet](https://arcjet.com/)
+- ⏰ **Automated scheduling** with [Upstash QStash](https://upstash.com/qstash)
+- 📧 Sends **email reminders** before subscription renewals
+- 🗄 **MongoDB** for storing subscription and user data
+- ⚡ **Express + Node.js** backend for fast performance
 
-📧 Sends email reminders before subscription renewals
+## 🛠 Tech Stack
+- **Backend:** Node.js + Express
+- **Database:** MongoDB
+- **Security:** [Arcjet](https://arcjet.com/)
+- **Scheduler:** [Upstash QStash](https://upstash.com/qstash)
+- **Email Service:** Nodemailer (or preferred provider)
 
-🗄 MongoDB for storing subscription and user data
+## 📦 Installation
 
-⚡ Express + Node.js backend for fast performance
-
-🛠 Tech Stack
-
-Backend: Node.js + Express
-
-Database: MongoDB
-
-Security: Arcjet
-
-Scheduler: Upstash QStash
-
-Email Service: (e.g., Nodemailer)
-
-📦 Installation
-Clone the repository
-
-bash
-Copy
-Edit
+```bash
+# 1️⃣ Clone the repository
 git clone https://github.com/yourusername/subscription-system.git
 cd subscription-system
-Install dependencies
 
-bash
-Copy
-Edit
+# 2️⃣ Install dependencies
 npm install
-Set environment variables
-Create a .env file in the root directory and add:
 
-ini
-Copy
-Edit
+# 3️⃣ Create a .env file in the root directory and add:
 MONGO_URI=your_mongodb_uri
 ARCJET_KEY=your_arcjet_key
 QSTASH_TOKEN=your_qstash_token
 EMAIL_USER=your_email_address
 EMAIL_PASS=your_email_password
-Run the server
 
-bash
-Copy
-Edit
+# 4️⃣ Run the server
 npm start
-📋 API Endpoints
-➕ Add a Subscription
-POST /subscriptions
-
-json
-Copy
-Edit
-{
-  "email": "user@example.com",
-  "service": "Netflix",
-  "renewalDate": "2025-08-20"
-}
-📄 Get All Subscriptions
-GET /subscriptions
-
-⚙ How It Works
-Users add subscriptions with an email and renewal date.
-
-QStash schedules reminder jobs based on the renewal date.
-
-Arcjet protects API routes from abuse.
-
-The system sends email reminders before the renewal date.
-
-📜 License
-MIT License – free to use and modify.
-
